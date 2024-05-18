@@ -1,0 +1,70 @@
+.projets{
+
+    border-radius: 10px;
+
+   &__swiper{
+        margin: 0 40px 0 40px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    
+        .imgProjets{
+            height: 70%;
+            width: 100%; 
+            position: absolute;
+            background-image: url("../assets/images/Iolce.png");
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            opacity: 0.4;
+        }
+
+        .para__projets{
+            color: #203030;
+        }
+
+        .medium{   
+            text-align: center;
+            padding: 0;
+            margin: 0;
+
+            &__li{
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                list-style: none;
+                text-transform: uppercase;
+                font-weight: 900;
+                padding: 20px 0 20px 0;
+
+                transform: translate(-50%, -50%);
+                transition: .5s;
+
+                &.active{
+                    line-height: 80px;
+                }
+
+                &:has(~ .active) { // Toutes options avant
+                    transform: translate(-50%, -170px);
+                    opacity: 0;
+
+                }
+                &:has(+ .active) { // li qui précède directement
+                    transform: translate(-50%, -140px);
+                    opacity: 0;
+                }
+                &.active ~ li { // Toutes options après
+                    transform: translate(-50%, 130px);
+                    opacity: 0; 
+                }
+                &.active + li { // li qui suit directement
+                    transform: translate(-50%, 100px);    
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DWMA project</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <!-- Meta Partage -->
+  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/app.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="scripts/app.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+</head>
+
+<body>
+
+  <header class="header__sticky">
+
+    <div class="header">
+
+      <div class="header__img">
+        <img class="header__logo" src="assets/images/CE.svg" alt="image Logo CE">
+      </div>
+
+      <div class="menu">
+
+        <ul class="menu__ul">
+          <li class="menu__el"><a href="index.html">Portfolio</a></li>
+          <li class="menu__el"><a href="stage.html">Internship</a></li>
+        </ul>
+        
+      </div>
+
+      <div class="header__btn header__btn--hide">
+        <button class="btn btn--talk">Let's Talk !</button>
+      </div>
+
+    </div>
+
+    <div class="header__line"></div>
+
+  </header>
+
+  <main>
+
+    <section class="aboutme">
+
+      <div class="section__width pad__title">
+
+        <h1 class="title title--big title--big__hide">
+          <span>Hi,</span> I'm camille
+        </h1>
+        <h2 class="title title--big title--big__hide">
+          Hi, <span>I'm</span> camille
+        </h2>
+        <h2 class="title title--big">
+          Hi, I'm <span>camille</span>
+        </h2>
+  
+      </div>
+
+      <div class="section__width">
+
+        <div class="aboutme__back">
+
+          <div class="aboutme__flex">
+            <img class="aboutme__flex__avatar" src="assets/images/avatar_about.png" alt="image Avatar">
+          </div>
+
+          <div class="aboutme__grid">
+
+            <h2 class="title title--med">About me</h2>
+
+            <div class="parag">
+
+              <p>
+                I am Camille, currently a student in web design at Albert Jacquard.
+              </p>
+              <p>
+                I am proficient in HTML, CSS, and I enjoy researching UI/UX design.
+              </p>
+              <p>
+                Additionally, I do video editing, so I am familiar with using After Effects. 
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section section__projets">
+
+      <div class="section__width">
+
+        <div class="projets__container">
+          <h2 class="title title--med title--med__align">Projets</h2>
+          <img src="assets/images/circle.svg" alt="Cercle" class="cercle__svg">
+        </div>
+
+        <div class="projets">
+          <div class="projets__swiper">
+              <div class="imgProjets"></div>
+              <ul class="medium">
+                  <li class="medium__li active">
+                    <a href="#" target="_blank">
+                      Supportive Eats
+                    </a>
+                    <p class="para__projets">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </li>
+                  <li class="medium__li">
+                    <a href="#" target="_blank">
+                      Rux
+                    </a>
+                    <p class="para__projets">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </li>
+                  <li class="medium__li">
+                    <a href="#" target="_blank">
+                      Iolce
+                    </a>
+                    <p class="para__projets">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </li>
+                  <li class="medium__li">
+                    <a href="#" target="_blank">
+                      Hello world
+                    </a>
+                    <p class="para__projets">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </li>
+              </ul>
+          </div>
+        </div> 
+      </div>
+       
+    </section>
+
+    <section class="section section__skills">
+
+      <div class="section__width">
+
+        <div class="projets__container">
+          <h2 class="title title--med title--med__align">Skills</h2>
+          <img src="assets/images/circle.svg" alt="Cercle" class="cercle__svg">
+        </div>
+        
+        <div class="skills__para">
+
+          <div class="grid__1">
+            <img class="img__picto" src="assets/images/html.png" alt="pictogramme HTML">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui reiciendis laboriosam, voluptate sed iusto expedita similique error quos voluptates id ducimus quisquam atque accusantium quae ex facilis veniam velit?
+            </p>
+          </div>
+
+          <div class="grid__2">
+            <img class="img__picto" src="assets/images/css.png" alt="pictogramme CSS">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui reiciendis laboriosam, voluptate sed iusto expedita similique error quos voluptates id ducimus quisquam atque accusantium quae ex facilis veniam velit?
+            </p>
+          </div>
+
+          <div class="grid__3">
+            <img class="img__picto" src="assets/images/js.png" alt="pictogramme JS">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui reiciendis laboriosam, voluptate sed iusto expedita similique error quos voluptates id ducimus quisquam atque accusantium quae ex facilis veniam velit?
+            </p>
+          </div>
+
+          <div class="grid__4">
+            <img class="img__picto" src="assets/images/php.png" alt="pictogramme PHP">
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui reiciendis laboriosam, voluptate sed iusto expedita similique error quos voluptates id ducimus quisquam atque accusantium quae ex facilis veniam velit?
+            </p>
+          </div>
+          
+        </div>
+
+        <div class="logos">
+          <div class="scroller">
+            <div class="scroller--center">
+              <h3 class="title title--light scroller__el">design</h3>
+              <h3 class="title title--light scroller__el">editing</h3>
+              <h3 class="title title--light scroller__el">Coding</h3>
+              <h3 class="title title--light scroller__el">Github</h3>
+              <h3 class="title title--light scroller__el">vectorization</h3>
+            </div>
+          </div>
+          <div class="scroller">
+            <div class="scroller--center">
+              <h3 class="title title--light scroller__el">design</h3>
+              <h3 class="title title--light scroller__el">editing</h3>
+              <h3 class="title title--light scroller__el">Coding</h3>
+              <h3 class="title title--light scroller__el">Github</h3>
+              <h3 class="title title--light scroller__el">vectorization</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+  </main>
+
+  
+
+</body>
+</html>
