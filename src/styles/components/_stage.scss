@@ -11,17 +11,15 @@
 
     &--choice{
         font-size: var(--font-med);
-        color: var(--title-light);
     }
 
     &--3{
         font-size: var(--font-light);
-        color: #fff;
     }
 }
 
 .content__2{
-    background-color: var(--background-btn);
+    background-color: var(--background-section);
     padding: 122px 0;
 }
 
@@ -29,6 +27,97 @@
 .section-1 {
     padding: 61px 0 61px 0;
     background-color: var(--title-white);
+}
+
+.gsap__anim {
+	will-change: transform;
+	overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    padding: 0 50px;
+}
+
+.sections {
+	height: 100vh;
+
+    .parallax__wrapp {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+    }
+}
+
+.serv{
+
+    .parallax__wrapp {
+        padding: 120px 0;
+    }
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        position: relative;
+        margin-top: auto;
+        padding-left: 0;
+        z-index: 2;
+    }
+
+    .content,
+    &__wrapp {
+	    height: 100%;
+    }
+
+    &__item {
+        position: relative;
+        font-family: "Unbounded", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        padding: 30px 0 30px 30px;
+        margin: 0 0 40px 0;
+        list-style: none;
+        color: var(--title);
+        font-size: var(--font-light);
+        text-transform: uppercase;
+        border: 1px solid var(--title);
+        cursor: pointer;
+
+        &--img {
+            position: absolute;
+            display: block;
+            width: 350px;
+            height: 400px;
+            top: 50%;
+            right: 5%;
+            pointer-events: none;
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transform: translateY(-50%);
+            transition: .4s;
+        }
+
+        &--img video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            background: var(--background-btn);
+            color: var(--title-white);
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        &:hover &--img {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
 }
 
 
@@ -61,12 +150,6 @@
         grid-column: 4 /7;
         width: 450px;
     }
-    .color-text{
-        color: #fff;
-    }
-
-    
-
   }
 }
 
@@ -82,113 +165,7 @@
           display: block;
       }
     }
-  }
-
-.wrapp {
-	position: relative;
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-}
-
-.main {
-	position: relative;
-	z-index: 2;
-}
-
-.content {
-	width: 100%;
-	height: auto;
-	padding: 0 50px;
-}
-
-.parallax__wrapp {
-	width: 100%;
-	height: 100%;
-}
-
-.sections {
-	height: 100vh;
-}
-
-.sections .parallax__wrapp {
-	padding: 50px 0;
-}
-
-.gsap__anim {
-	will-change: transform;
-	overflow: hidden;
-}
-
-.serv .parallax__wrapp {
-	padding: 120px 0;
-}
-
-.serv__wrapp {
-	display: flex;
-	flex-direction: column;
-}
-
-.serv__list {
-	position: relative;
-	margin-top: auto;
-    padding-left: 0;
-	z-index: 2;
-}
-
-.serv .content,
-.serv .serv__wrapp {
-	height: 100%;
-}
-
-.serv__item {
-	position: relative;
-    font-family: "Unbounded", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-	padding: 30px 0;
-    margin: 0 0 40px 0;
-	padding-left: 30px;
-	list-style: none;
-	color: var(--title);
-	font-size: var(--font-light);
-	text-transform: uppercase;
-	border: 1px solid var(--title);
-	cursor: pointer;
-}
-
-.serv__item-img {
-	position: absolute;
-	display: block;
-	width: 350px;
-	height: 400px;
-	top: 50%;
-	right: 5%;
-	pointer-events: none;
-	clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
-	transform: translateY(-50%);
-	transition: .4s;
-}
-
-.serv__item-img img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.serv__item:hover {
-	background: var(--color-n3);
-	color: var(--pr-color);
-	z-index: 2;
-}
-
-.serv__item:hover .serv__item-img {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 
-.footer{
-    background-color: aquamarine;
-    padding: 100px 0 100px 0;
-}
+
