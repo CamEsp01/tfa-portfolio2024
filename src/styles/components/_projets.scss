@@ -18,11 +18,13 @@
             background-size: cover;
             background-position: center;
             border-radius: 30px;
-            opacity: 0.4;
+            opacity: 0.3;
         }
 
         .para__projets{
-            color: #203030;
+            color: var(--title);
+            line-height: 1.5;
+            padding: 0 40px 0 40px;
         }
 
         .medium{   
@@ -36,12 +38,15 @@
                 top: 50%;
                 left: 50%;
                 list-style: none;
-                text-transform: uppercase;
-                font-weight: 900;
+                font-weight: 600;
                 padding: 20px 0 20px 0;
 
                 transform: translate(-50%, -50%);
                 transition: .5s;
+
+                & a:hover{
+                    color: var(--background-btn);
+                }
 
                 &.active{
                     line-height: 80px;
@@ -68,3 +73,4 @@
         }
     }
 }
+

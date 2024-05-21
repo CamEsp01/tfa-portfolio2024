@@ -38,6 +38,7 @@ const img = gsap.timeline({
   
   var imgs = [
     "../assets/images/TFA.png",
+    "../assets/images/dataplay.png",
     "../assets/images/RUX.png",
     "../assets/images/Iolce.png",
     "../assets/images/Helloworld.png",
@@ -64,52 +65,69 @@ const img = gsap.timeline({
 
 // PAGE STAGE /////////////////////////////////////////////////////////////////
 
-//   $(function () {
+$(function () {
 
-// 	'use strict';
-
-
-// 	//Lenis Smooth scroll
-// 	const lenis = new Lenis({
-// 		duration: 1.2,
-// 	});
-// 	function raf(time) {
-// 		lenis.raf(time)
-// 		requestAnimationFrame(raf)
-// 	}
-
-// 	requestAnimationFrame(raf)
-
-// 	//Integration Lenis on GSAP ScrollTrigger
-// 	lenis.on('scroll', ScrollTrigger.update)
-
-// 	gsap.ticker.add((time) => {
-// 		lenis.raf(time * 1000)
-// 	})
-
-// 	//Create animation
-// 	function scrollTrig() {
-
-// 		gsap.registerPlugin(ScrollTrigger);
-
-// 		let gsapAnim = gsap.utils.toArray('.gsap__anim');
-// 		gsapAnim.forEach(section => {
-// 			gsap.to(section, {
-// 				scrollTrigger: {
-// 					trigger: section,
-// 					start: 'bottom bottom',
-// 					end: 'bottom top',
-// 					scrub: true,
-// 					snap: true
-// 				},
-// 				yPercent: 100,
-// 				ease: 'none'
-// 			});
-// 		});
-
-	
-// 	}
-// 	scrollTrig();
+	'use strict';
 
 
-// });
+	//Lenis Smooth scroll
+	const lenis = new Lenis({
+		duration: 1.2,
+	});
+	function raf(time) {
+		lenis.raf(time)
+		requestAnimationFrame(raf)
+	}
+
+	requestAnimationFrame(raf)
+
+	//Integration Lenis on GSAP ScrollTrigger
+	lenis.on('scroll', ScrollTrigger.update)
+
+	gsap.ticker.add((time) => {
+		lenis.raf(time * 1000)
+	})
+
+	//Create animation
+	function scrollTrig() {
+
+		gsap.registerPlugin(ScrollTrigger);
+
+		let gsapAnim = gsap.utils.toArray('.gsap__anim');
+		gsapAnim.forEach(section => {
+			gsap.to(section, {
+				scrollTrigger: {
+					trigger: section,
+					start: 'bottom bottom',
+					end: 'bottom top',
+					scrub: true,
+					snap: true
+				},
+				yPercent: 100,
+				ease: 'none'
+			});
+		});
+	}
+	scrollTrig();
+
+
+});
+
+  // SWIPER SECTION AFTER EFFECTS //////////////////////////////////////////
+
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });

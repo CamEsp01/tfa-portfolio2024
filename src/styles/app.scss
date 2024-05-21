@@ -270,7 +270,11 @@ body{
 // SECTION PROJETS //////////////////////////////////////////////////////////////////
 
 .section{
-    margin: 61px 0 61px 0;
+    padding: 61px 0 61px 0;
+}
+
+.section__projets{
+    margin-top: 61px;
 }
 
 .projets__container{
@@ -291,9 +295,27 @@ body{
     font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: #701367;
+    font-size: var(--font-light);
+    text-transform: uppercase;
+    color: var(--title);
     text-decoration: none;
     // font-size: 54px;
+}
+
+@media (min-width: 1200px) {
+
+    .projets__container{
+    
+        .cercle__svg{
+            position: absolute;
+            width: 450px;
+            top: 40%;
+            left: 49%; 
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    
+    }
 }
 
 // SECTION SKILLS //////////////////////////////////////////////////////////////////
@@ -331,7 +353,7 @@ body{
       &__el {
         display: inline-block;
         margin-left: 128px;
-        max-width: 200px;
+        max-width: 400px;
         max-height: 200px;
         text-transform: uppercase;
       }
@@ -398,5 +420,40 @@ body{
         --font-par: 20px;
     }
 }
+
+// .afterEffects{
+//     position: relative;
+// }
+
+
+// .afterEffects .swiper {
+//     width: 90%;
+//     padding-top: 50px;
+//     padding-bottom: 50px;
+// }
+
+// .afterEffects .swiper-slide {
+
+//     background-position: center;
+//     background-size: cover;
+//     margin-bottom: 20px;
+//     width: 400px;
+//     height: 500px;
+
+//     video{
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         position: absolute;
+
+//     }
+// }
+
+// .afterEffects .swiper-pagination-bullet{
+//     background: #A4C3B2;
+// }
+// .afterEffects .swiper-pagination-bullet-active{
+//     background: #203030;
+// }
 
 
