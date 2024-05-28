@@ -11,7 +11,7 @@
         position: relative;
     
         .imgProjets{
-            height: 70%;
+            height: 60%;
             width: 100%; 
             position: absolute;
             background-image: url("../assets/images/TFA.png");
@@ -61,11 +61,11 @@
                     transform: translate(-50%, -140px);
                     opacity: 0;
                 }
-                &.active ~ li { // Toutes options après
+                &.active ~ .medium__li { // Toutes options après
                     transform: translate(-50%, 130px);
                     opacity: 0; 
                 }
-                &.active + li { // li qui suit directement
+                &.active + .medium__li { // li qui suit directement
                     transform: translate(-50%, 100px);    
                     opacity: 0;
                 }
@@ -73,4 +73,89 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+
+    .projets{
+    
+       &__swiper{
+    
+            .medium{   
+    
+                &__li{
+                    transition: .3s;
+    
+                    &:has(~ .active) { // Toutes options avant
+                        transform: translate(-50%, -130px);
+                        opacity: 0;
+    
+                    }
+                    &:has(+ .active) { // li qui précède directement
+                        transform: translate(-50%, -80px);
+                        opacity: 0;
+                    }
+                    &.active ~ li { // Toutes options après
+                        transform: translate(-50%, 100px);
+                        opacity: 0; 
+                    }
+                    &.active + li { // li qui suit directement
+                        transform: translate(-50%, 50px);    
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+
+
+@media (min-width: 768px) {
+
+    .projets{
+    
+       &__swiper{
+        
+            .imgProjets{
+                height: 75%;
+            }
+    
+            .medium{   
+    
+                &__li{
+                    transition: .5s;
+
+                    & a:hover{
+                        text-decoration: underline;
+                    }
+    
+                    &.active{
+                        line-height: 80px;
+                    }
+    
+                    &:has(~ .active) { // Toutes options avant
+                        transform: translate(-50%, -170px);
+                        opacity: 0;
+    
+                    }
+                    &:has(+ .active) { // li qui précède directement
+                        transform: translate(-50%, -140px);
+                        opacity: 0;
+                    }
+                    &.active ~ li { // Toutes options après
+                        transform: translate(-50%, 130px);
+                        opacity: 0; 
+                    }
+                    &.active + li { // li qui suit directement
+                        transform: translate(-50%, 100px);    
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 

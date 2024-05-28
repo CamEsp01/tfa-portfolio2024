@@ -29,7 +29,6 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
 </head>
 
@@ -47,7 +46,7 @@
 
         <ul class="menu__ul">
           <li class="menu__el"><a href="index.html">Portfolio</a></li>
-          <li class="menu__el"><a href="stage.html">Internship</a></li>
+          <li class="menu__el menu__el--active"><a href="stage.html">Internship</a></li>
         </ul>
         
       </div>
@@ -66,6 +65,8 @@
 
     <section class="section-1 gsap__anim">
 
+      <div class="section__width"> 
+
             <div class="grid__stage">
               <h1 class="title title--stage gri1">
                 Internship
@@ -80,81 +81,120 @@
               <p class="gri3">For a three-month period, from November 2024 to January 2025.</p>
 
             </div>
+      </div>
 
     </section>
 
-      <section class="section_1 gsap__anim back-test">
+      <section class="section_1 gsap__anim">
 
-            <div class="grid__stage content__2">
+        <div class="section__width"> 
 
-            <h2 class="title title--choice gri2">The art of choice</h2>
+            <div class="grid__stage">
 
-            <!-- <img class="gri4" src="assets/images/choice.png" alt="image de panneaux de direction"> -->
+              <h2 class="title title--choice gri2">The art of <span>choice</span></h2>
 
-            <h3 class="title title--3 gri3">A challenge</h3>
+              <img class="gri4" src="assets/images/img_stage.png" alt="image de panneaux de direction">
 
-            <p class="color-text gri3">I would like to head towards an agency that uses PHP and JS as I aim to improve my skills in these domains where I am not yet very comfortable.
-            </p>
+              <div class="gri5 pad__grid">
 
-            <h3 class="title title--3 gri3">Video and design</h3>
+                <h3 class="title title--3">A challenge</h3>
 
-            <p class="color-text gri3">I am also very interested in the idea of joining an agency specialized in video and design, as it is a domain that particularly excites me.
-              I appreciate the opportunity to incorporate videos into my projects and to use video editing software.</p>
+                <p class="color-text">I would like to head towards an agency that uses PHP and JS as I aim to improve my skills in these domains where I am not yet very comfortable.</p>
+
+                <h3 class="title title--3">Video and design</h3>
+
+                <p class="color-text">I am also very interested in the idea of joining an agency specialized in video and design, as it is a domain that particularly excites me.
+                  I appreciate the opportunity to incorporate videos into my projects and to use video editing software.</p>
+
+              </div>
+
             </div>
+        </div>
 
     </section>
 
     <section class="section-1 gsap__anim">
 
-          <div class="grid__stage">
-            <h2 class="title title--choice gri2">
-              Beyond pastime,<br>a true passion.
-            </h2>
+      <div class="section__width"> 
 
-            <p class="gri3">As mentioned earlier, video editing has been a passion of mine for the past 4 years. I regularly use the After Effects program and am quite familiar with its features. In my free time, I enjoy dedicating myself to creating video edits for entertainment purposes. These edits feature characters from series that I particularly cherish. Not only does this activity allow me to express my creativity, but it has also led me to new encounters and discussions with fellow series enthusiasts.
-            </p>
+      <div class="grid__stage">
+        <h2 class="title title--choice gri2">
+          Beyond pastime,<br>a true passion.
+        </h2>
 
-            <p class="gri3"> Additionally, I share my creations on platforms such as TikTok and Instagram, where my friends also share their edits. This practice enables us to exchange our creations and nurture our shared passion for video editing and series, thereby strengthening our bonds of friendship.</p>
+        <p class="gri3">As mentioned earlier, video editing has been a passion of mine for the past 4 years. I regularly use the After Effects program and am quite familiar with its features. In my free time, I enjoy dedicating myself to creating video edits for entertainment purposes. These edits feature characters from series that I particularly cherish. Not only does this activity allow me to express my creativity, but it has also led me to new encounters and discussions with fellow series enthusiasts.
+        </p>
 
-          </div>
+        <p class="gri3 testo"> Additionally, I share my creations on platforms such as TikTok and Instagram, where my friends also share their edits. This practice enables us to exchange our creations and nurture our shared passion for video editing and series, thereby strengthening our bonds of friendship.</p>
 
-    <div class="sections gsap__anim serv">
-      <div class="parallax__wrapp">
-        <div class="content">
-            <ul class="serv__list">
-              <li class="serv__item">Transition edit
-                <span class="serv__item--img">
-                  <!-- <img src="assets/images/photoTest.png" alt=""> -->
-                  <video controls width="400" autoplay muted loop>
-                    <source src="assets/videos/jj.mp4" type="video/mp4">
-                  </video>
-                </span>
-              </li>
-              <li class="serv__item">Velocity edit
-                <span class="serv__item--img">
-                  <!-- <img src="assets/images/photoTest.png" alt=""> -->
-                  <video controls width="400" autoplay muted loop>
-                    <source src="assets/videos/finick-odair.mp4" type="video/mp4">
-                  </video>
-                </span>
-              </li>
-              <li class="serv__item">Scenes edit
-                <span class="serv__item--img">
-                  <!-- <img src="assets/images/photoTest.png" alt=""> -->
-                  <video controls width="400" autoplay muted loop>
-                    <source src="assets/videos/stelena.mp4" type="video/mp4">
-                  </video>
-                </span>
-              </li>
-            </ul>
+      </div>
+
+    </section>
+
+    <section class="section-1 gsap__anim">
+
+      <div class="grid__stage">
+        <h2 class="title title--choice gri2">Video Editing</h2>
+      </div>
+
+      <div class="sections gsap__anim serv">
+        <div class="parallax__wrapp">
+          <div class="content">
+              <ul class="serv__list">
+                <li class="serv__item">Transition 
+                  <span class="serv__item--img">
+                    <video class="hover-video" controls width="400" muted loop>
+                      <source src="assets/videos/jj.mp4" type="video/mp4">
+                    </video>
+                  </span>
+                </li>
+                <li class="serv__item">Velocity 
+                  <span class="serv__item--img">
+                    <video class="hover-video" controls width="400" muted loop>
+                      <source src="assets/videos/sarah-cameron.mp4" type="video/mp4">
+                    </video>
+                  </span>
+                </li>
+                <li class="serv__item">Scenes 
+                  <span class="serv__item--img">
+                    <video class="hover-video" controls width="400" muted loop>
+                      <source src="assets/videos/stelena.mp4" type="video/mp4">
+                    </video>
+                  </span>
+                </li>
+              </ul>
           </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
 
   </main>
+
+  <footer>
+
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+          </defs>
+          <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" class="waves__color waves__color--1"/>
+              <use xlink:href="#gentle-wave" x="48" y="3" class="waves__color waves__color--2"/>
+              <use xlink:href="#gentle-wave" x="48" y="5" class="waves__color waves__color--3"/>
+              <use xlink:href="#gentle-wave" x="48" y="7" class="waves__color waves__color--4"/>
+          </g>
+      </svg>
+    </div>
+
+    <small class="credits">
+      <a href="https://dwt.heaj.be/" class="credits__el">DWT</a>
+      - <a href="https://camille-espert.be" class="credits__el">Camille Espert</a>
+      © 2024
+    </small>  
+
+  </footer>
+
 
 </body>
 </html>
