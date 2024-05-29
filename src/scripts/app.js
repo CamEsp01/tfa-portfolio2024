@@ -61,59 +61,66 @@ if(projets != null || projets != undefined){
 
 // SECTION PROJETS /////////////////////////////////////////////////////////////////
 
+// GSAP animation for imgProjets
 const img = gsap.timeline({
   scrollTrigger: {
-    // markers: true,
+    // markers: true, // Uncomment for debugging
     trigger: ".imgProjets",
     scrub: true, 
     start: "top 100%",
     end: "+=50%"
   }
-})
-  
-.from(".imgProjets", {
+}).from(".imgProjets", {
   scale: 0.85, 
   ease: "none"
-})
-  
+});
+
+// Pin the .projets section
 let pinOptions = ScrollTrigger.create({
   trigger: ".projets",
   pin: true,
   scrub: true,
-  trigger: ".projets",
   start: "top 0%",
-  endTrigger: ".section__skills",
+  endTrigger: ".section__skills"
 });
-  
+
+// Select all .medium__li elements and the .imgProjets element
 var li = document.querySelectorAll('.medium__li');
 var imgProjets = document.querySelector('.imgProjets');
-  
+
+// Array of image URLs
 var imgs = [
   "assets/images/TFA.png",
   "assets/images/dataplay.png",
   "assets/images/RUX.png",
   "assets/images/Iolce.png",
   "assets/images/Helloworld.png"
-]
+];
 
-console.log(imgs);
-  
-function parallax(){
-    var scrollTop = window.scrollY;    
-    var optionsElPositionX = pinOptions.start;
-    var liSize = 300;
-    var min = optionsElPositionX
-    var max = optionsElPositionX + li.length * liSize;
-  
-    if(scrollTop >= min && scrollTop <= max){
-      var activeIndex = Math.abs(Math.ceil((scrollTop - optionsElPositionX -liSize) / liSize));
-      var active = document.querySelector(".active");
-      active.classList.remove("active");
-      li[activeIndex].classList.add("active");
-  
-      imgProjets.style.backgroundImage = "url('" + imgs[activeIndex] + "')";
-    }    
+// Function to handle parallax effect
+function parallax() {
+  var scrollTop = window.scrollY;    
+  var optionsElPositionX = pinOptions.start;
+  var liSize = 300;
+  var min = optionsElPositionX;
+  var max = optionsElPositionX + li.length * liSize;
+
+  if(scrollTop >= min && scrollTop <= max) {
+    var activeIndex = Math.abs(Math.ceil((scrollTop - optionsElPositionX - liSize) / liSize));
+    var active = document.querySelector(".medium__li.active");
+    if (active) active.classList.remove("active");
+    li[activeIndex].classList.add("active");
+
+    imgProjets.style.backgroundImage = "url('" + imgs[activeIndex] + "')";
+    imgProjets.innerHTML = `<a href="${li[activeIndex].querySelector('a').href}" target="_blank" style="display:block; width:100%; height:100%;"></a>`;
+  }
 }
+
+// Listen for the scroll event and trigger parallax function
+window.addEventListener('scroll', parallax);
+
+// Initial call to set the first image
+parallax();
 
 // SWIPER SECTION AFTER EFFECTS //////////////////////////////////////////
   
@@ -265,6 +272,15 @@ videoItems.forEach(item => {
 
 // animateCircles();
 
+var burgerMenu = document.querySelector('.burger__menu');
+var menu = document.querySelector('.menu');
+
+if (burgerMenu) {
+    burgerMenu.addEventListener('click', function () {
+        this.classList.toggle('designopen');
+        menu.classList.toggle('menu--open');
+    });
+}
 
 
 

@@ -44,8 +44,18 @@
                 transform: translate(-50%, -50%);
                 transition: .5s;
 
-                & a:hover{
+                a{
+                    text-decoration: none;
+                }
+
+                h3{
+                    text-transform: uppercase;
+                }
+
+                h3:hover{
                     color: var(--background-btn);
+                    text-decoration: underline;
+                    transition: 0.1s;
                 }
 
                 &.active{
@@ -126,10 +136,6 @@
                 &__li{
                     transition: .5s;
 
-                    & a:hover{
-                        text-decoration: underline;
-                    }
-    
                     &.active{
                         line-height: 80px;
                     }
