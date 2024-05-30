@@ -8,7 +8,7 @@
     --title-white: #fff;
     --background-skills: #CCE3DE;
     --background-section: #A4C3B2;
-    --background-btn: #C25048;
+    --background-btn: #AB463F;
     --background-svg: #203030;
     
     --font-big: 61px;
@@ -147,7 +147,6 @@ body{
       
 }
 
-
 @media (min-width: 1200px) {
     
     .section__width{
@@ -164,6 +163,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: var(--title-white);
     bottom: 0;
     left: 0;
     padding: 0 0 100px 0;
@@ -224,12 +224,16 @@ body{
 // SECTION PROJETS //////////////////////////////////////////////////////////////////
 
 .section{
-    padding: 100px 0;
+    background-color: var(--title-white);
 }
 
-// .section__projets{
-//    margin-top: 61px;
-// }
+.body__back{
+    background-color: var(--background-section);
+}
+
+.section__ae{
+    padding: 100px 0;
+}
 
 .projets__container{
 
@@ -374,7 +378,7 @@ body{
 
 // SECTION AFTER EFFECTS //////////////////////////////////////////////////////////////////
 
-.afterEffects{
+.section__ae{
 
     .swiper {
         width: 100%;
@@ -476,7 +480,7 @@ body{
 
 @media (min-width: 768px) {
 
-    .afterEffects{
+    .section__ae{
     
         .swiper-slide {
             margin: 50px 0;
@@ -526,22 +530,22 @@ body{
         }
     }
 
-    .section {
+    .section__ae {
         padding: 122px 0;
     }
 
-    .afterEffects{
+    .section__ae{
     
         .swiper-slide {
-            width: 400px;
-            height: 520px;
+            width: 350px;
+            height: 480px;
     
         }
     }
 
     .modal-content {
-        width: 700px; /* same as iframe width */
-        height: 550px; /* same as iframe height */
+        width: 400px; /* same as iframe width */
+        height: 450px; /* same as iframe height */
       }
 
 }

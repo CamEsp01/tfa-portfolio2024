@@ -116,16 +116,9 @@
     .menu__el--active a {
         color: var(--title-big);
     }
-
-    
-
 }
 
 @media (min-width: 768px) {
-
-    .section__width {
-        max-width: 900px;
-    }
     
     .header__sticky {
         position: sticky;
