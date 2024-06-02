@@ -125,6 +125,75 @@
     }
 }
 
+.serv{
+
+    .parallax__wrapp {
+        padding: 200px 0;
+    }
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        position: relative;
+        margin-top: auto;
+        padding-left: 0;
+        z-index: 2;
+    }
+
+    .content,
+    &__wrapp {
+	    height: 100%;
+    }
+
+    &__item {
+        position: relative;
+        font-family: "Unbounded", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        padding: 30px 0 30px 30px;
+        margin: 0 0 40px 0;
+        list-style: none;
+        color: var(--title);
+        font-size: var(--font-light);
+        text-transform: uppercase;
+        border: 1px solid var(--title);
+        cursor: pointer;
+
+        &--img {
+            position: absolute;
+            display: block;
+            width: 350px;
+            height: 400px;
+            top: 50%;
+            right: 5%;
+            pointer-events: none;
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transform: translateY(-50%);
+            transition: .4s;
+        }
+
+        &--img video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            background: var(--background-btn);
+            color: var(--title-white);
+            transition: 0.3s;
+            z-index: 2;
+        }
+
+        &:hover &--img {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+}
 
 @media (min-width: 768px) {
 
@@ -177,45 +246,6 @@
   }
 }
 
-@media (max-width: 767px) {
-
-    .grid__stage{
-  
-      &__title{
-          display: inline-block;
-      }
-  
-      &__line{
-          display: block;
-      }
-
-      .gri4{
-        padding: 40px 0;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    .title{
-    
-        &--h2{
-            padding: 40px 0;
-        }
-
-        &--stage{
-            padding: 40px 0 0 0;
-        }
-    
-        &--3{
-            padding: 40px 0;
-        }
-
-        &--choice{
-            padding: 40px 0;
-        }
-    }
-}
 
 
 

@@ -564,6 +564,28 @@ body{
 //     z-index: 99999999;
 // }
 
+
+// ::-webkit-scrollbar{
+//     width: .6rem;
+//     background-color: #ad6b67;
+// }
+
+// ::-webkit-scrollbar-thumb{
+//     background-color: var(--background-btn);
+//     border-radius: 20px;
+// }
+
+// ::-webkit-scrollbar-thumb:hover{
+//     background-color: #852c26;
+// }
+
+.section__credits{
+    margin: 60px 0;
+}
+
+.credit{
+    margin: 100px 40px;
+}
   
 
 

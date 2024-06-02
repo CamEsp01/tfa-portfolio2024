@@ -2,7 +2,7 @@
 .waves {
     position:relative;
     width: 100%;
-    height:15vh;
+    height: 15vh;
     margin-bottom:-10px; 
     background-color: var(--title-white);
     min-height:100px;
@@ -53,36 +53,61 @@
     }
   }
 
-  .credits{
+  .dwt {
+    width: 50px;
+    transform: translateY(3px);
+  }
+  
+  .dwt__txt {
+    fill: var(--title);
+    transition: fill 1s;
+  }
+  
+  .dwt__und {
+    fill: var(--background-btn);
+  }
+
+  .footer__el{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    justify-items: center;
-    padding: 40px;
-    background-color: var(--background-section);
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .subNav {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    align-items: center;
+    padding: 30px 0 20px 0;
+    margin: 0;
+  }
+  
+  .subNav__el a {
+    text-decoration: none;
+    color: var(--title);
+    font-weight: 500;
+  }
+  
+  .subNav__el a:hover {
+    color: var(--background-btn);
+    text-decoration: underline;
+  }
+  
+  .credits {
+    color: var(--title);
+    padding: 10px 0 0 0;
+  }
+  
+  .credits a {
+    text-decoration: none;
+  }
+
+  .display-cred {
     color: var(--title);
   }
-  .credits__el{
-    color:var(--title);
-    position: relative;
-    text-decoration: none;
-    margin: 0 5px;
+  
+  .display-cred:hover {
+    color: var(--background-btn);
+    text-decoration: underline;
   }
   
-  .credits__el::after {
-    content:'';
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    bottom: 0;
-    left: 0;
-    background-color: #FFFFFA;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s;
-  }
-  
-  .credits__el:hover::after {
-    transform-origin: bottom left;
-    transform: scaleX(1);
-  }
