@@ -1,0 +1,29 @@
+.section__small{
+    margin: 60px 0;
+
+    .credit{
+
+        margin: 100px 40px;
+
+        img{
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        &__flex{
+            padding: 20px;
+
+        }
+
+        &__ul{
+            padding: 40px;
+        }
+
+        &__el{
+            list-style: none;   
+            padding-bottom: 20px; 
+        }
+
+    }
+
+}

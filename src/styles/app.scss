@@ -2,6 +2,8 @@
 @import "components/_stage";
 @import "components/_footer";
 @import "components/_header";
+@import "components/_credits";
+@import "components/_ui-kit";
 
 :root{
     --title: #203030;
@@ -178,7 +180,6 @@ body{
     }
 
 }
-
 
 @media (max-width: 767px) {
 
@@ -579,13 +580,8 @@ body{
 //     background-color: #852c26;
 // }
 
-.section__credits{
-    margin: 60px 0;
-}
 
-.credit{
-    margin: 100px 40px;
-}
+
   
 
 
