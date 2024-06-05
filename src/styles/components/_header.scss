@@ -8,19 +8,14 @@
 
 @media (max-width: 767px) {
 
-    .header__sticky{
+    .header{
 
-        background-color: var(--background-section);
+        &__img{
+            padding: 20px 0 0 10px;
+        }
 
-        .header{
-
-            &__img{
-                padding: 20px 0 0 10px;
-            }
-
-            &__btn--hide{
-                display: none;
-            }
+        &__btn--hide{
+            display: none;
         }
     }
 
@@ -63,7 +58,7 @@
     
     .menu__ul {
         position: fixed;
-        background-color: var(--background-btn);
+        background-color: var(--background-section);
         width: 100%;
         height: 100%;
         bottom: -100%; /* Animer à partir du bas de l'écran */

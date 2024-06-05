@@ -259,51 +259,6 @@ videoItems.forEach(item => {
     });
 });
 
-// CURSOR //////////////////////////////////////////////////////////////////
-
-const coords = { x: 0, y: 0 };
-const circles = document.querySelectorAll(".circle");
-
-const colors = [
-  "#C25048"
-];
-
-circles.forEach(function (circle, index) {
-  circle.x = 0;
-  circle.y = 0;
-  circle.style.backgroundColor = colors[index % colors.length];
-});
-
-window.addEventListener("mousemove", function(e){
-  coords.x = e.clientX;
-  coords.y = e.clientY;
-  
-});
-
-function animateCircles() {
-  
-  let x = coords.x;
-  let y = coords.y;
-  
-  circles.forEach(function (circle, index) {
-    circle.style.left = x - 12 + "px";
-    circle.style.top = y - 12 + "px";
-    
-    circle.style.scale = (circles.length - index) / circles.length;
-    
-    circle.x = x;
-    circle.y = y;
-
-    const nextCircle = circles[index + 1] || circles[0];
-    x += (nextCircle.x - x) * 0.3;
-    y += (nextCircle.y - y) * 0.3;
-  });
- 
-  requestAnimationFrame(animateCircles);
-}
-
-animateCircles();
-
 var burgerMenu = document.querySelector('.burger__menu');
 var menu = document.querySelector('.menu');
 
@@ -329,6 +284,45 @@ Animation.forEach(function (element) {
   });
 });
 
+gsap.utils.toArray('.skills__para__flex').forEach((element) => {
+  gsap.fromTo(element, 
+    { opacity: 0,
+      y: 50
+    }, 
+    {
+      opacity: 1, 
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 80%',
+        end: 'top 40%',  
+        scrub: true
+      }
+    }
+  );
+});
+
+// if (window.matchMedia("(min-width: 768px)").matches) {
+// gsap.fromTo('.aboutme__flex__avatar',
+//       {
+//         opacity: 0, 
+//         scale: 0.5
+//       }, // Start state
+//       {
+//         opacity: 1, 
+//         scale: 1,
+//         duration: 1.5,
+//         ease: "sine.inOut",
+//         scrollTrigger: {
+//           trigger: '.aboutme__flex__avatar',
+//           start: 'top 80%', 
+//           end: 'top 60%',  
+//           scrub: true
+//         }
+//       }
+//     );
+// }
 
 
 

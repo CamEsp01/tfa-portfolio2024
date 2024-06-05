@@ -196,6 +196,10 @@ body{
         &__flex{
             display: flex;
             justify-content: center;
+
+            &__avatar{
+                width: 320px;
+            }
         }
     }
 }
@@ -343,6 +347,17 @@ body{
     }
 }
 
+@media (max-width: 767px) {
+
+    .skills__para{
+
+        p{
+            padding-left: 40px;
+        }
+    }
+
+}
+
 @media (min-width: 768px) {
 
     .skills__para{
@@ -383,6 +398,15 @@ body{
     }
 }
 
+@media (min-width: 768px) {
+
+.section__skills{
+
+    .skills__para{
+        padding: 100px 20px 100px 20px;
+    }
+}
+}
 // SECTION AFTER EFFECTS //////////////////////////////////////////////////////////////////
 
 .section__ae{
@@ -417,7 +441,7 @@ body{
 }
 
 .grid-test{
-    padding: 60px 0 60px 20px;
+    padding: 60px 20px;
 
     .para{
         grid-column: 4 / 8;
@@ -490,12 +514,12 @@ body{
 
     .grid-test{
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(9, 1fr);
         grid-template-rows: auto;
         padding: 60px 0 20px 0;
     
         .para{
-            grid-column: 4 / 8;
+            grid-column: 5 / 10;
             padding-right: 20px;
             max-width: 700px;
         }
@@ -525,9 +549,13 @@ body{
 
     .grid-test{
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(13, 1fr);
         grid-template-rows: auto;
         padding: 100px 0 60px 0;
+
+        .para{
+            grid-column: 7 / 14;
+        }
     }
 
     .aboutme{
@@ -542,7 +570,7 @@ body{
     }
 
     .section__ae {
-        padding: 120px 0;
+        padding: 100px 0;
     }
 
     .section__ae{
@@ -553,30 +581,8 @@ body{
     
         }
     }
-
-    // .modal-content {
-    //     width: 400px; /* same as iframe width */
-    //     height: 450px; /* same as iframe height */
-    //   }
-
 }
 
-// CURSOR ////////////////////////////////////////////////////////////////////
-
-@media (min-width: 1200px) {
-
-.circle {
-    height: 16px;
-    width: 16px;
-    border-radius: 24px;
-    background-color: black;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 99999999;
-}
-}
 
 
 
