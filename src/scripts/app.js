@@ -140,10 +140,7 @@ parallax();
     },
 
     loop: true,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    // },
-  });
+});
 
 // SVG CIRCLE ///////////////////////////////////////////////////////////////////////
 
@@ -200,6 +197,41 @@ window.onclick = function (event) {
   }
 };
 
+// ANIM TITLE /////////////////////////////////////////////////////////////////////
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pad__title",
+    start: "top center",
+    end: "bottom center",
+    scrub: true
+  }
+});
+
+tl.from(".title--big span", {
+  duration: 1.5,
+  y: 50,
+  opacity: 0,
+  ease: "power4.out",
+  stagger: 0.3
+})
+.to(".title--big span", {
+  duration: 1,
+  rotation: 360,
+  scale: 1.2,
+  color: "#203030",
+  stagger: 0.3
+})
+.to(".title--big span", {
+  duration: 1,
+  scale: 1,
+  color: "#AB463F",
+  stagger: 0.3
+});
+}
+
 }
 
 // PAGE STAGE ///////////////////////////////////////////////////////////////////////
@@ -229,48 +261,48 @@ videoItems.forEach(item => {
 
 // CURSOR //////////////////////////////////////////////////////////////////
 
-// const coords = { x: 0, y: 0 };
-// const circles = document.querySelectorAll(".circle");
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
 
-// const colors = [
-//   "#C25048"
-// ];
+const colors = [
+  "#C25048"
+];
 
-// circles.forEach(function (circle, index) {
-//   circle.x = 0;
-//   circle.y = 0;
-//   circle.style.backgroundColor = colors[index % colors.length];
-// });
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
 
-// window.addEventListener("mousemove", function(e){
-//   coords.x = e.clientX;
-//   coords.y = e.clientY;
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
   
-// });
+});
 
-// function animateCircles() {
+function animateCircles() {
   
-//   let x = coords.x;
-//   let y = coords.y;
+  let x = coords.x;
+  let y = coords.y;
   
-//   circles.forEach(function (circle, index) {
-//     circle.style.left = x - 12 + "px";
-//     circle.style.top = y - 12 + "px";
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
     
-//     circle.style.scale = (circles.length - index) / circles.length;
+    circle.style.scale = (circles.length - index) / circles.length;
     
-//     circle.x = x;
-//     circle.y = y;
+    circle.x = x;
+    circle.y = y;
 
-//     const nextCircle = circles[index + 1] || circles[0];
-//     x += (nextCircle.x - x) * 0.3;
-//     y += (nextCircle.y - y) * 0.3;
-//   });
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
  
-//   requestAnimationFrame(animateCircles);
-// }
+  requestAnimationFrame(animateCircles);
+}
 
-// animateCircles();
+animateCircles();
 
 var burgerMenu = document.querySelector('.burger__menu');
 var menu = document.querySelector('.menu');
@@ -281,6 +313,23 @@ if (burgerMenu) {
         menu.classList.toggle('menu--open');
     });
 }
+
+var Animation = document.querySelectorAll('.gri4');
+Animation.forEach(function (element) {
+  gsap.from(element, {
+    opacity: 0,
+    x: -150,
+    duration: 5,
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 65%',
+      end: 'bottom 100%',
+      scrub: true
+    }
+  });
+});
+
+
 
 
 

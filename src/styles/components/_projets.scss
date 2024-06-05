@@ -1,5 +1,5 @@
 .projets{
-
+    
     border-radius: 10px;
 
    &__swiper{
@@ -42,7 +42,7 @@
                 padding: 20px 0 20px 0;
 
                 transform: translate(-50%, -50%);
-                transition: .5s;
+                transition: .3s;
 
                 a{
                     text-decoration: none;
@@ -55,7 +55,6 @@
                 h3:hover{
                     color: var(--background-btn);
                     text-decoration: underline;
-                    transition: 0.1s;
                 }
 
                 &.active{
@@ -63,63 +62,26 @@
                 }
 
                 &:has(~ .active) { // Toutes options avant
-                    transform: translate(-50%, -170px);
+                    transform: translate(-50%, -130px);
                     opacity: 0;
 
                 }
                 &:has(+ .active) { // li qui précède directement
-                    transform: translate(-50%, -140px);
+                    transform: translate(-50%, -80px);
                     opacity: 0;
                 }
                 &.active ~ .medium__li { // Toutes options après
-                    transform: translate(-50%, 130px);
+                    transform: translate(-50%, 100px);
                     opacity: 0; 
                 }
                 &.active + .medium__li { // li qui suit directement
-                    transform: translate(-50%, 100px);    
+                    transform: translate(-50%, 50px);    
                     opacity: 0;
                 }
             }
         }
     }
 }
-
-@media (max-width: 767px) {
-
-    .projets{
-    
-       &__swiper{
-    
-            .medium{   
-    
-                &__li{
-                    transition: .3s;
-    
-                    &:has(~ .active) { // Toutes options avant
-                        transform: translate(-50%, -130px);
-                        opacity: 0;
-    
-                    }
-                    &:has(+ .active) { // li qui précède directement
-                        transform: translate(-50%, -80px);
-                        opacity: 0;
-                    }
-                    &.active ~ li { // Toutes options après
-                        transform: translate(-50%, 100px);
-                        opacity: 0; 
-                    }
-                    &.active + li { // li qui suit directement
-                        transform: translate(-50%, 50px);    
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-    }
-    
-
-}
-
 
 @media (min-width: 768px) {
 
@@ -135,33 +97,24 @@
     
                 &__li{
                     transition: .5s;
-
-                    &.active{
-                        line-height: 80px;
-                    }
     
                     &:has(~ .active) { // Toutes options avant
                         transform: translate(-50%, -170px);
-                        opacity: 0;
     
                     }
                     &:has(+ .active) { // li qui précède directement
                         transform: translate(-50%, -140px);
-                        opacity: 0;
                     }
                     &.active ~ li { // Toutes options après
                         transform: translate(-50%, 130px);
-                        opacity: 0; 
                     }
                     &.active + li { // li qui suit directement
                         transform: translate(-50%, 100px);    
-                        opacity: 0;
                     }
                 }
             }
         }
     }
-
 }
 
 

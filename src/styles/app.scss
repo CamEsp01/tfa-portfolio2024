@@ -45,7 +45,7 @@ body{
       color: var(--title-white);
 
       span{
-        color: var(--background-btn);
+        color: var(--background-svg);
       }
     }
   
@@ -64,7 +64,7 @@ body{
 }
 
 .pad__title{
-    padding: 61px 0 61px 10px;
+    padding: 60px 0 60px 10px;
 }
 
 @media (max-width: 767px) {
@@ -75,6 +75,10 @@ body{
     
           &__hide{
             display: none;
+          }
+
+          span{
+            color: var(--background-btn);
           }
 
         }
@@ -186,7 +190,7 @@ body{
     .aboutme{
 
         &__grid{
-            padding: 61px 0 61px 10px;
+            padding: 60px 0 60px 10px;
         }
     
         &__flex{
@@ -292,30 +296,32 @@ body{
 }
 
 .logos {
+
     white-space: nowrap;
     margin: 0 -130px;
     background-color: var(--background-skills);
 
     .scroller {
+
         display: inline-block;
         -webkit-animation: 45s linear infinite auto-scroll;
-                animation: 45s linear infinite auto-scroll;
+        animation: 45s linear infinite auto-scroll;
         padding: 20px 0 20px 0;
     
 
-      &--center{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+        &--center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-      &__el {
-        display: inline-block;
-        margin-left: 128px;
-        max-width: 400px;
-        max-height: 200px;
-        text-transform: uppercase;
-      }
+        &__el {
+            display: inline-block;
+            margin-left: 128px;
+            max-width: 400px;
+            max-height: 200px;
+            text-transform: uppercase;
+        }
     }
 }
   
@@ -337,10 +343,10 @@ body{
     }
 }
 
-
 @media (min-width: 768px) {
 
     .skills__para{
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -408,13 +414,6 @@ body{
             object-fit: cover;    
         }
     }
-
-    // .swiper-pagination-bullet{
-    //     background: var(--background-svg);
-    // }
-    // .swiper-pagination-bullet-active{
-    //     background: var(--background-btn);
-    // }
 }
 
 .grid-test{
@@ -493,7 +492,7 @@ body{
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: auto;
-        padding: 60px 0 60px 0;
+        padding: 60px 0 20px 0;
     
         .para{
             grid-column: 4 / 8;
@@ -502,10 +501,10 @@ body{
         }
     }
 
-    .modal-content {
-        width: 600px; /* same as iframe width */
-        height: 450px; /* same as iframe height */
-      }
+    // .modal-content {
+    //     width: 600px; /* same as iframe width */
+    //     height: 450px; /* same as iframe height */
+    //   }
 }
 
 @media (min-width: 1000px) {
@@ -524,15 +523,26 @@ body{
         --font-par: 20px;
     }
 
+    .grid-test{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        padding: 100px 0 60px 0;
+    }
+
     .aboutme{
 
         &__back{
-            padding: 122px 40px;
+            padding: 200px 60px;
         }
     }
 
+    .aboutme__flex__avatar{
+        width: 400px;
+    }
+
     .section__ae {
-        padding: 122px 0;
+        padding: 120px 0;
     }
 
     .section__ae{
@@ -544,41 +554,32 @@ body{
         }
     }
 
-    .modal-content {
-        width: 400px; /* same as iframe width */
-        height: 450px; /* same as iframe height */
-      }
+    // .modal-content {
+    //     width: 400px; /* same as iframe width */
+    //     height: 450px; /* same as iframe height */
+    //   }
 
 }
 
 // CURSOR ////////////////////////////////////////////////////////////////////
 
-// .circle {
-//     height: 24px;
-//     width: 24px;
-//     border-radius: 24px;
-//     background-color: black;
-//     position: fixed; 
-//     top: 0;
-//     left: 0;
-//     pointer-events: none;
-//     z-index: 99999999;
-// }
+@media (min-width: 1200px) {
+
+.circle {
+    height: 16px;
+    width: 16px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+}
+}
 
 
-// ::-webkit-scrollbar{
-//     width: .6rem;
-//     background-color: #ad6b67;
-// }
 
-// ::-webkit-scrollbar-thumb{
-//     background-color: var(--background-btn);
-//     border-radius: 20px;
-// }
-
-// ::-webkit-scrollbar-thumb:hover{
-//     background-color: #852c26;
-// }
 
 
 
