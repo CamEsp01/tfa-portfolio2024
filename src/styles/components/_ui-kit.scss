@@ -1,32 +1,32 @@
 .ui-kit{
     padding: 100px 40px;
-}
 
-.square{
+    .square{
 
-    display: flex;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    .squares{
-        height: 100px;
-        width: 100px;
-        margin-right: 40px;
-
-        &__1{
-            background-color: var(--background-section);
-        }
-
-        &__2{
-            background-color: var(--background-btn);
-        }
-
-        &__3{
-            background-color: var(--background-skills);
-        }
-
-        &__4{
-            background-color: var(--title);
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    
+        .squares{
+            height: 100px;
+            width: 100px;
+            margin-right: 40px;
+    
+            &__1{
+                background-color: var(--background-section);
+            }
+    
+            &__2{
+                background-color: var(--background-btn);
+            }
+    
+            &__3{
+                background-color: var(--background-skills);
+            }
+    
+            &__4{
+                background-color: var(--title);
+            }
         }
     }
 }
