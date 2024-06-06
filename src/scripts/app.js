@@ -46,7 +46,6 @@ if(projets != null || projets != undefined){
 
 // SECTION PROJETS /////////////////////////////////////////////////////////////////
 
-// GSAP animation for imgProjets
 const img = gsap.timeline({
   scrollTrigger: {
     trigger: ".imgProjets",

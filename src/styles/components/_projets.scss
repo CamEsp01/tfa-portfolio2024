@@ -117,5 +117,18 @@
     }
 }
 
+@media (min-width: 768px) {
+
+    .projets{
+    
+       &__swiper{
+        
+            .imgProjets{
+                height: 80%;
+            }
+        }
+    }
+}
+
 
 
