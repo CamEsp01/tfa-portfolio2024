@@ -296,7 +296,7 @@ body{
         padding: 60px 20px 100px 20px;
     }
 
-    .img__picto{
+    .title__pad{
         padding: 40px 0;
     }
 }
@@ -409,6 +409,7 @@ body{
     }
 }
 }
+
 // SECTION AFTER EFFECTS //////////////////////////////////////////////////////////////////
 
 .section__ae{
@@ -466,8 +467,8 @@ body{
     &__content {
         position: relative;
         background: none;
-        width: 300px; /* same as iframe width */
-        height: 350px; /* same as iframe height */
+        width: 300px; 
+        height: 350px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -560,10 +561,10 @@ body{
         &__back{
             padding: 200px 60px;
         }
-    }
 
-    .aboutme__flex__avatar{
-        width: 400px;
+        &__flex__avatar{
+            width: 400px;
+        }
     }
 
     .section__ae {
