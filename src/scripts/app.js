@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// PAGE STAGE /////////////////////////////////////////////////////////////////
+// LENIS SCROLL /////////////////////////////////////////////////////////////////
 
 $(function () {
 
@@ -29,32 +29,17 @@ $(function () {
 	})
 });
 
-gsap.registerPlugin(ScrollTrigger);
+// BURGER MENU ////////////////////////////////////////////////////////////////////
 
-function scrollTrig() {
+var burgerMenu = document.querySelector('.burger__menu');
+var menu = document.querySelector('.menu');
 
-    let gsapAnim = gsap.utils.toArray('.gsap__anim');
-    gsapAnim.forEach(section => {
-        gsap.fromTo(section, {
-            y: 100,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: section,
-                start: 'top bottom',
-                end: 'top center',
-                scrub: true,
-                toggleActions: 'play none none reverse'
-            },
-            duration: 1.5,
-            ease: 'power2.out'
-        });
+if (burgerMenu) {
+    burgerMenu.addEventListener('click', function () {
+        this.classList.toggle('designopen');
+        menu.classList.toggle('menu--open');
     });
 }
-
-scrollTrig();
 
 var projets = document.querySelector('.imgProjets');
 if(projets != null || projets != undefined){
@@ -64,7 +49,6 @@ if(projets != null || projets != undefined){
 // GSAP animation for imgProjets
 const img = gsap.timeline({
   scrollTrigger: {
-    // markers: true, // Uncomment for debugging
     trigger: ".imgProjets",
     scrub: true, 
     start: "top 100%",
@@ -75,7 +59,6 @@ const img = gsap.timeline({
   ease: "none"
 });
 
-// Pin the .projets section
 let pinOptions = ScrollTrigger.create({
   trigger: ".projets",
   pin: true,
@@ -84,11 +67,9 @@ let pinOptions = ScrollTrigger.create({
   endTrigger: ".section__skills"
 });
 
-// Select all .medium__li elements and the .imgProjets element
 var li = document.querySelectorAll('.medium__li');
 var imgProjets = document.querySelector('.imgProjets');
 
-// Array of image URLs
 var imgs = [
   "assets/images/TFA.png",
   "assets/images/dataplay.png",
@@ -97,7 +78,6 @@ var imgs = [
   "assets/images/Helloworld.png"
 ];
 
-// Function to handle parallax effect
 function parallax() {
   var scrollTop = window.scrollY;    
   var optionsElPositionX = pinOptions.start;
@@ -116,30 +96,27 @@ function parallax() {
   }
 }
 
-// Listen for the scroll event and trigger parallax function
 window.addEventListener('scroll', parallax);
 
-// Initial call to set the first image
 parallax();
 
 // SWIPER SECTION AFTER EFFECTS //////////////////////////////////////////
   
-  window.addEventListener('scroll', parallax);
+window.addEventListener('scroll', parallax);
 
-  var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 300,
-      modifier: 1,
-      slideShadows: true,
-    },
-
-    loop: true,
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 300,
+    modifier: 1,
+    slideShadows: true,
+  },
+  loop: true,
 });
 
 // SVG CIRCLE ///////////////////////////////////////////////////////////////////////
@@ -172,6 +149,7 @@ containers.forEach(container => {
   });
 });
 
+// AFFICHAGE VIDEOS SWIPER ////////////////////////////////////////////////////////
 
 var modal = document.getElementById("videoModal");
 var modalVideo = document.getElementById("modalVideo");
@@ -197,7 +175,7 @@ window.onclick = function (event) {
   }
 };
 
-// ANIM TITLE /////////////////////////////////////////////////////////////////////
+// ANIM TITLE BIG /////////////////////////////////////////////////////////////////////
 
 if (window.matchMedia("(min-width: 768px)").matches) {
 
@@ -231,10 +209,38 @@ tl.from(".title--big span", {
   stagger: 0.3
 });
 }
-
 }
 
-// PAGE STAGE ///////////////////////////////////////////////////////////////////////
+// ANIM PAGE STAGE ///////////////////////////////////////////////////////////////////s
+
+gsap.registerPlugin(ScrollTrigger);
+
+function scrollTrig() {
+
+    let gsapAnim = gsap.utils.toArray('.gsap__anim');
+    gsapAnim.forEach(section => {
+        gsap.fromTo(section, {
+            y: 100,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: section,
+                start: 'top bottom',
+                end: 'top center',
+                scrub: true,
+                toggleActions: 'play none none reverse'
+            },
+            duration: 1.5,
+            ease: 'power2.out'
+        });
+    });
+}
+
+scrollTrig();
+
+// ANIM HOVER VIDEOS ///////////////////////////////////////////////////////////////////////
 
 const videoItems = document.querySelectorAll('.serv__item');
 
@@ -259,30 +265,25 @@ videoItems.forEach(item => {
     });
 });
 
-var burgerMenu = document.querySelector('.burger__menu');
-var menu = document.querySelector('.menu');
-
-if (burgerMenu) {
-    burgerMenu.addEventListener('click', function () {
-        this.classList.toggle('designopen');
-        menu.classList.toggle('menu--open');
-    });
-}
+// ANIM GSAP IMG ///////////////////////////////////////////////////////////////////
 
 var Animation = document.querySelectorAll('.gri4');
 Animation.forEach(function (element) {
   gsap.from(element, {
     opacity: 0,
     x: -150,
-    duration: 5,
+    duration: 2, 
+    ease: "power2.out", 
     scrollTrigger: {
       trigger: element,
-      start: 'top 65%',
+      start: 'top 80%', 
       end: 'bottom 100%',
       scrub: true
     }
   });
 });
+
+// ANIM GSAP TEXTES /////////////////////////////////////////////////////////////////
 
 gsap.utils.toArray('.skills__para__flex').forEach((element) => {
   gsap.fromTo(element, 
@@ -303,26 +304,7 @@ gsap.utils.toArray('.skills__para__flex').forEach((element) => {
   );
 });
 
-// if (window.matchMedia("(min-width: 768px)").matches) {
-// gsap.fromTo('.aboutme__flex__avatar',
-//       {
-//         opacity: 0, 
-//         scale: 0.5
-//       }, // Start state
-//       {
-//         opacity: 1, 
-//         scale: 1,
-//         duration: 1.5,
-//         ease: "sine.inOut",
-//         scrollTrigger: {
-//           trigger: '.aboutme__flex__avatar',
-//           start: 'top 80%', 
-//           end: 'top 60%',  
-//           scrub: true
-//         }
-//       }
-//     );
-// }
+
 
 
 

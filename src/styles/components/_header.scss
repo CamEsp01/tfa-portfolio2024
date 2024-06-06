@@ -146,7 +146,7 @@
     
             .menu {
 
-                margin-left: auto; 
+                margin-left: auto;
             
                 &__ul {
                     display: flex;
@@ -155,35 +155,96 @@
                 }
             
                 &__el {
+
                     list-style: none;
                     align-items: center;
-                    position: relative; 
-                    overflow: hidden; 
+                    position: relative;
+                    overflow: hidden;
             
                     &.menu__el--active a {
+
                         color: var(--background-btn);
+                        
+                        &::after {
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
                     }
-            
                 }
             
                 &__el a {
+
                     color: var(--title);
                     text-decoration: none;
-                    // font-weight: bold;
                     position: relative;
                     display: inline-block;
-                    padding: 5px 0; 
-                    transition: color 0.3s; 
+                    padding: 5px 0;
+                    transition: color 0.3s;
+            
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: var(--background-btn);
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
                 }
             
                 &__el:hover a,
-                &__el:focus a{
+                &__el:focus a {
                     color: var(--background-btn);
                 }
-            }
-    
-            .btn {
+            
+                &__el:hover a::after,
+                &__el:focus a::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            
+                &__el:hover {
 
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: 300%;
+                        height: 300%;
+                        transform: translateX(-50%) translateY(-50%) scale(0);
+                        transition: transform 0.5s ease-out;
+                        border-radius: 50%;
+                        z-index: -1;
+                    }
+                }
+            
+                &__el:focus {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: 300%;
+                        height: 300%;
+                        transform: translateX(-50%) translateY(-50%) scale(0);
+                        transition: transform 0.5s ease-out;
+                        border-radius: 50%;
+                        z-index: -1;
+                    }
+                }
+            
+                &__el:hover::before,
+                &__el:focus::before {
+                    transform: translateX(-50%) translateY(-50%) scale(1);
+                }
+            }
+            
+            .btn {
+                
                 font-size: var(--font-par);
                 font-family: "Nunito Sans", sans-serif;
                 font-optical-sizing: auto;
@@ -196,8 +257,8 @@
                 text-align: center;
                 cursor: pointer;
             
+            
                 &--talk {
-                    
                     background-color: var(--background-btn);
                     border: 1px solid var(--title);
                     padding: 7px 12px 6px 12px;
