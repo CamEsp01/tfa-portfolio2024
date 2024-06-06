@@ -23,8 +23,31 @@
         &__el{
             list-style: none;   
             padding-bottom: 20px; 
+
+            a{
+                color: var(--title);
+                text-decoration: none;
+            }
         }
-
     }
+}
 
+@media (max-width: 767px) {
+
+    .section__small{
+
+        .credit{
+            margin: 60px 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .section__small{
+
+        .credit{
+            margin: 100px 100px;
+        }
+    }
 }

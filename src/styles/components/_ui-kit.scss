@@ -1,16 +1,26 @@
 .ui-kit{
-    padding: 100px 40px;
+    padding: 100px 100px 40px 100px;
+
+    p{
+        padding-bottom: 20px;
+    }
+
+    .title--uikit{
+        font-size: var(--font-big);
+    }
+
+    .pad__uikit{
+        padding-bottom: 40px;
+    }
 
     .square{
 
         display: flex;
-        padding-top: 40px;
         padding-bottom: 40px;
     
         .squares{
             height: 100px;
             width: 100px;
-            margin-right: 40px;
     
             &__1{
                 background-color: var(--background-section);
@@ -27,6 +37,35 @@
             &__4{
                 background-color: var(--title);
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .ui-kit{
+        padding: 60px 20px 0 20px;
+    }
+
+    .square{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .squares{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .square{
+
+        .squares{
+
+            margin-right: 40px;
         }
     }
 }
