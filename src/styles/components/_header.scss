@@ -68,11 +68,11 @@
             background-color: var(--background-section);
             width: 100%;
             height: 100%;
-            bottom: -100%; /* Animer à partir du bas de l'écran */
+            bottom: -100%; 
             list-style: none;
             padding: 0;
             text-align: center;
-            transition: transform 0.5s ease-in-out, bottom 0.5s ease-in-out; /* Transition pour le déplacement et l'apparition */
+            transition: transform 0.5s ease-in-out, bottom 0.5s ease-in-out; 
             z-index: 999;
 
             & a {
