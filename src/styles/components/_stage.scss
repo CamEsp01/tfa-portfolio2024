@@ -34,7 +34,19 @@
   
 .grid__stage {
 
-  padding: 20px 20px 0 20px;
+  padding: 20px;
+
+  p{
+    a{
+
+      text-decoration: none;
+      color: var(--background-btn);
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 
   .gri4 {
     width: 300px;
@@ -107,7 +119,6 @@
         width: 350px;
         height: 400px;
         top: 50%;
-        right: 5%;
         pointer-events: none;
         clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
         transform: translateY(-50%);
@@ -129,7 +140,7 @@
   .grid__stage {
 
     p{
-      padding-bottom: 60px;
+      padding-bottom: 40px;
     }
 
     &__title {
@@ -163,7 +174,7 @@
     }
   
     &--choice {
-      padding: 40px 0;
+      padding: 40px 0 60px 0;
     }
   }
 
@@ -255,6 +266,10 @@
 
     &__item {
 
+      &--img {
+        right: -10%;
+      }
+
       &:hover {
         background: var(--background-btn);
         color: var(--title-white);
@@ -275,6 +290,7 @@
   .grid__stage{
 
     grid-template-columns: repeat(13, 1fr);
+    padding: 100px 0;
   
     .gri1{
       grid-column: 4 / 13;
@@ -305,6 +321,16 @@
   
     .pad__grid{
       padding: 0;
+    }
+  }
+
+  .serv{
+
+    &__item {
+
+      &--img {
+        right: 5%;
+      }
     }
   }
 }

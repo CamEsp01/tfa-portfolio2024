@@ -244,24 +244,32 @@ scrollTrig();
 const videoItems = document.querySelectorAll('.serv__item');
 
 videoItems.forEach(item => {
-    const video = item.querySelector('.hover-video');
+  const video = item.querySelector('.hover-video');
 
-    item.addEventListener('mouseenter', function () {
-        console.log('Mouse entered', video);
-        video.muted = false;
-        video.play().then(() => {
-            console.log('Video is playing with sound.');
+  video.muted = true;
+  video.play().catch((error) => {
+    console.error('Error playing video silently:', error);
+  });
+
+  item.addEventListener('mouseenter', function () {
+    console.log('Mouse entered', video);
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          video.muted = false;
+          console.log('Video is playing.');
         }).catch((error) => {
-            console.error('Error playing video:', error);
-        });
-    });
+          console.error('Error playing video:', error);
+          });
+      }
+});
 
-    item.addEventListener('mouseleave', function () {
-        console.log('Mouse left', video);
-        video.muted = true;
-        video.pause();
-        video.currentTime = 0; 
-    });
+item.addEventListener('mouseleave', function () {
+  console.log('Mouse left', video);
+  video.muted = true;
+  video.pause();
+  video.currentTime = 0;
+  });
 });
 
 // ANIM GSAP IMG ///////////////////////////////////////////////////////////////////
