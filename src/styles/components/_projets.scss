@@ -3,6 +3,7 @@
     border-radius: 10px;
 
    &__swiper{
+
         margin: 0 40px 0 40px;
         height: 100vh;
         display: flex;
@@ -112,19 +113,6 @@
                         transform: translate(-50%, 100px);    
                     }
                 }
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) {
-
-    .projets{
-    
-       &__swiper{
-        
-            .imgProjets{
-                height: 80%;
             }
         }
     }

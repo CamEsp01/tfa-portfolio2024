@@ -247,28 +247,23 @@ videoItems.forEach(item => {
   const video = item.querySelector('.hover-video');
 
   video.muted = true;
-  video.play().catch((error) => {
-    console.error('Error playing video silently:', error);
-  });
 
   item.addEventListener('mouseenter', function () {
     console.log('Mouse entered', video);
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          video.muted = false;
-          console.log('Video is playing.');
-        }).catch((error) => {
-          console.error('Error playing video:', error);
-          });
-      }
-});
+    video.currentTime = 0; // Rembobiner la vidéo au début à chaque hover
+    video.play().then(() => {
+      video.muted = false;
+      console.log('Video is playing.');
+    }).catch((error) => {
+      console.error('Error playing video:', error);
+    });
+  });
 
-item.addEventListener('mouseleave', function () {
-  console.log('Mouse left', video);
-  video.muted = true;
-  video.pause();
-  video.currentTime = 0;
+  item.addEventListener('mouseleave', function () {
+    console.log('Mouse left', video);
+    video.muted = true;
+    video.pause();
+    video.currentTime = 0;
   });
 });
 
